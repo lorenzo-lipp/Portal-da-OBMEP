@@ -3,3 +3,8 @@ node_modules
 dist
 dist-ssr
 *.local
+.replit
+.upm
+.cache
+replit_zip_error_log.txt
+replit.nix
