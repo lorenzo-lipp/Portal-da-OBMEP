@@ -1,5 +1,5 @@
-import Puzzle from '/src/components/Puzzle';
-import FakePuzzle from '/src/components/FakePuzzle';
+import PuzzleGrid from '/src/components/PuzzleGrid';
+import NoMatches from '/src/components/NoMatches';
 import Navbar from '/src/components/Navbar';
 import Footer from '/src/components/Footer';
 import filterPuzzles from "/src/utils/filterPuzzles.js";
@@ -9,16 +9,18 @@ import { useEffect, useState } from 'react';
 
 export default function Home() {
   const puzzles = [
-    ...Array(10).fill(0).map((_, i) => i + 1)
+    ...Array(11).fill(0).map((_, i) => i + 1)
   ];
   const [search, setSearch] = useState("");
+  const [keywords, setKeywords] = useState({});
 
-  const levelOne = puzzles.filter(filterPuzzles(1, search));
-  const levelTwo = puzzles.filter(filterPuzzles(2, search));
+  const levelOne = puzzles.filter(filterPuzzles(1, search, Object.keys(keywords)));
+  const levelTwo = puzzles.filter(filterPuzzles(2, search, Object.keys(keywords)));
   levelOne.sort(sortPuzzles);
   levelTwo.sort(sortPuzzles);
   let levelOneFakePuzzleConditions = getFakePuzzleConditions(levelOne);
   let levelTwoFakePuzzleConditions = getFakePuzzleConditions(levelTwo);
+
 
   function handleScroll() {
     let puzzles = document.querySelectorAll(".puzzle");
@@ -37,45 +39,17 @@ export default function Home() {
     window.addEventListener("resize", handleScroll);
   }, []);
 
-  useEffect(handleScroll, [search]);
+  useEffect(handleScroll, [search, keywords]);
 
   return (
     <>
-      <Navbar showSearch={true} search={search} callback={setSearch} />
+      <Navbar showSearch={true} search={search} callback={setSearch} keywords={keywords} setKeywords={setKeywords} />
       <h1>Quebra-cabeças</h1>
       <div className="grid-container">
 
-        {levelOne.length ?
-          <>
-            <div className="level">
-              <h2 className="level-name">Nível 1</h2>
-              <img className="level-icon" src="11.png" />
-            </div>
-            <div className="grid">
-              {levelOne.map((id, iteration) => <Puzzle puzzleId={id} key={"puzzle1" + id + "n" + iteration} />)}
-              <FakePuzzle showIf={levelOneFakePuzzleConditions} />
-            </div>
-          </>
-          : <></>}
-
-        {levelTwo.length ?
-          <>
-            <div className="level">
-              <h2 className="level-name">Nível 2</h2>
-              <img className="level-icon" src="12.png" />
-            </div>
-            <div className="grid">
-              {levelTwo.map((id, iteration) => <Puzzle puzzleId={id} key={"puzzle2" + id + "n" + iteration} />)}
-              <FakePuzzle showIf={levelTwoFakePuzzleConditions} />
-            </div>
-          </>
-          : <></>}
-
-        {!levelOne.length && !levelTwo.length ?
-          <div className="noMatches">
-            Não foi possível encontrar nenhum quebra-cabeças com esse nome!
-          </div>
-          : <></>}
+        <PuzzleGrid puzzleList={levelOne} level="1" icon="11.png" showIf={levelOneFakePuzzleConditions}/>
+        <PuzzleGrid puzzleList={levelTwo} level="2" icon="12.png" showIf={levelTwoFakePuzzleConditions}/>
+        <NoMatches show={!levelOne.length && !levelTwo.length} search={search} keywords={keywords}/>
 
       </div>
 

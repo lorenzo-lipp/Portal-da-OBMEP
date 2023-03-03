@@ -2,20 +2,21 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from '/src/components/SearchBar';
 
-export default function Navbar({ showSearch, search, callback }) {
+export default function Navbar({ showSearch, search, callback, keywords, setKeywords }) {
   const [visible, setVisible] = useState(false);
 
   function handleClick() {
     setVisible(!visible);
     callback("");
+    setKeywords({});
   }
-  
+
   return (
     <>
       <div className="navbar">
-        
+
         <Link to="/" className="icon-container">
-          <img className="icon" src="/avatar.png"/>
+          <img className="icon" src="/avatar.png" />
           Portal
         </Link>
         <Link to="/">Quebra-cabeças</Link>
@@ -24,8 +25,17 @@ export default function Navbar({ showSearch, search, callback }) {
           Busca
         </Link> : <></>}
       </div>
-      {showSearch ? <SearchBar visible={visible} search={search} callback={callback} /> : <></>}
-      <div className="puzzles"/>
+      {
+        showSearch ? 
+        <SearchBar 
+          visible={visible} 
+          search={search} 
+          callback={callback} 
+          keywords={keywords} 
+          setKeywords={setKeywords} 
+        /> : <></>
+      }
+      <div className="puzzles" />
     </>
   )
 }

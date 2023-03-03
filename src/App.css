@@ -3,22 +3,30 @@
 :root {
   --dark-green: #1a8e41;
   --green: #44af49;
+  --checkbox-green: #4da351;
   --yellow: #ebb21a;
+  --light-yellow: #f1dc33;
+  --dark-orange: #ff4e00;
   --orange: #e98323;
   --red: #e74538;
   --blue: #0580c5;
   --purple: #814cd7;
+  --light-purple: #a078e2;
   --cyan: #37c19e;
   --bkg: #faf4e1;
   --navbar: #174599;
   --navbar-light: #275dc0;
+  --button-border: #cdcac0;
+  --pdf-border: #363533;
+  --geogebra-border: #d9d7d2;
+  --default-font: 'Source Sans Pro';
   scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--bkg);
+  font-family: var(--default-font), arial;
   margin: 0;
-  font-family: 'Source Sans Pro', arial;
   overflow-x: hidden;
 }
 
@@ -257,7 +265,7 @@ h1 {
 }
 
 .button-active { 
-  border: 3px solid #cdcac0; 
+  border: 3px solid var(--button-border); 
   padding: 7px 9px;
 }
 
@@ -282,13 +290,14 @@ i {
   max-width: 1000px;
   width: 97%;
   height: 100vh;
-  border: 2px solid #363533;
+  border: 2px solid var(--pdf-border);
 }
 
 .geogebra {
   aspect-ratio: 760 / 580;
   width: 760px;
-  border: 1px solid #d9d7d2;
+  max-width: 98%;
+  border: 1px solid var(--geogebra-border);
 }
 
 .empty-iframe {
@@ -325,7 +334,7 @@ i {
 }
 
 .noMatches {
-  color: #ff4e00;
+  color: var(--dark-orange);
   text-align: center;
   font-size: 40px;
   font-weight: bold;
@@ -340,7 +349,7 @@ i {
   display: flex;
   justify-content: center;
   height: 53px;
-  transition: height 0.5s;
+  transition: height 0.4s;
 }
 
 .search-bar.hidden {
@@ -363,7 +372,7 @@ i {
   transition: opacity 0s 0s;
 }
 
-.search-bar input {
+.search-bar input[type="text"] {
   background-color: rgba(255, 255, 255, 0.5);
   margin: 10px 0; 
   padding: 5px 20px;
@@ -373,11 +382,150 @@ i {
   outline: none;
   text-align: center;
   color: white;
-  font-family: 'Source Sans Pro', arial;
+  font-family: var(--default-font), arial;
   font-size: 20px;
   font-weight: bold;
   opacity: 1;
   transition: opacity 0.2s 0.3s;
+}
+
+.checkbox-marked {
+  position: relative;
+  background-color: var(--checkbox-green);
+  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+.checkbox-marked::before {
+  content: "\2713";
+  position: absolute;
+  left: 15%;
+  top: -15%;
+  font-size: 18px;
+  font-family: arial;
+  font-weight: bold;
+  color: var(--bkg);
+}
+
+.checkbox-unmarked {
+  background-color: var(--bkg);
+  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+.search-bar label {
+  color: var(--bkg);
+  height: min-content;
+  margin-left: 5px;
+}
+
+.search-bar-row {
+  align-items: center;
+  height: fit-content;
+  padding: 8px 20%;
+  flex-wrap: wrap;
+}
+
+.search-bar-row.hidden {
+  height: 0px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.search-bar-row.hidden .search-bar-checkbox {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.search-bar-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 10px;
+  transition: opacity 0.15s 0s;
+}
+
+.flex-justified {
+  display: flex;
+  justify-content: center;
+}
+
+.rate {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--navbar-light)
+}
+
+.stars {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 30px;
+}
+
+.light-yellow-star {
+  color: var(--light-yellow);
+  -webkit-text-stroke: 1px black;
+}
+
+.fa-star:last-child {
+  margin-right: 0;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  transition: height 0.5s;
+}
+
+.comments h2 {
+  text-align: center;
+}
+
+.comments .textarea-wrapper {
+  height: 150px;
+  width: min(80%, 600px);
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: 20px 30px;
+  border-radius: 40px;
+  margin-bottom: 20px;
+}
+
+.comments textarea {
+  width: 100%;
+  height: 150px;
+  font-size: 20px;
+  font-family: var(--default-font), arial;
+  font-weight: bold;
+  color: var(--navbar-light);
+  outline: none;
+  border: none;
+  resize: none;
+  background-color: transparent;
+}
+
+.comments .button-purple:hover {
+  background-color: var(--light-purple);
+}
+
+.comments-hidden {
+  visibility: hidden;
+  height: 0px;
+}
+
+.comments-visible {
+  visibility: visible;
+  height: unset;
+}
+
+.rate .thanks {
+  color: var(--green);
 }
 
 @media (min-width: 1757px) {

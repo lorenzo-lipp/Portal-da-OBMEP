@@ -5,12 +5,13 @@ export default {
     name: "Os Chapéus do Mágico",
     level: 1,
     geogebra: "dshawh2j",
-    new: true,
+    new: false,
     apresentacao: "1yLq__6YC-zJqVSDucWiB50zW2E0cQ76Y",
     solucao: "1FuLS28fGYFmDtv2H3raMlb2LFUONtkwI",
     discussao: "1SOXwNrIMpOJyyuxibzutxBm_z-8h6XDB",
     docente: "1qdFlQY9AtKGIag7EYKZqbSWo2dEGQLd1",
-    confeccao: "1rXMkE82oDQkXZYJPon9NWp2flEQLzTEn"
+    confeccao: "1rXMkE82oDQkXZYJPon9NWp2flEQLzTEn",
+    keywords: ["Lógica"]
   },
   2: {
     icon: "2.png",
@@ -23,7 +24,8 @@ export default {
     solucao: "1ds-pN3pGdxj9zL_-t3Tl7-sl0OiUkR16",
     discussao: "11E44MjaI6p_TxEFILylTHmaVkYxzqlk-",
     docente: "1Cgv8T_zVPfdadKdm13ge3153UNYblav0",
-    confeccao: "164NltRGprhO0Gr889eLyXwNtI8bFiOoV"
+    confeccao: "164NltRGprhO0Gr889eLyXwNtI8bFiOoV",
+    keywords: ["Lógica"]
   },
   3: {
     icon: "3.png",
@@ -36,7 +38,8 @@ export default {
     solucao: "1zqwoq23fUd7Ln0n5Okq62TQMgNpeskP9",
     discussao: "11C__dL5LNt0D2HwN7WTfS_YH4Eu6wJW2",
     docente: "1C7zjBBf1hs2PS3PNbcZgOB0l-ZQ7EEc0",
-    confeccao: "1pRi4BfnWU1qnExIzAVLrsPx7KiSK_D-C"
+    confeccao: "1pRi4BfnWU1qnExIzAVLrsPx7KiSK_D-C",
+    keywords: ["Lógica"]
   },
   4: {
     icon: "4.png",
@@ -44,12 +47,13 @@ export default {
     name: "Dia das Crianças",
     level: 2,
     geogebra: "p5mzxcvm",
-    new: true,
+    new: false,
     apresentacao: "1eQicQIbRwlJUlGo0MYLkcKxx_E8UhC3u",
     solucao: "1bCAvLkNF7U6Osd5Az2zqDoSDUDEYGGt0",
     discussao: "1_dDzWzpSlB6sxquwq1nAzvX--TmpstjS",
     docente: "1lv3Zdz3U7fCR2qlW7vm5qrmZ1oosSQNa",
-    confeccao: "1sjAN_oR3vZccdcj_MIUbLXdX3EtISKDq"
+    confeccao: "1sjAN_oR3vZccdcj_MIUbLXdX3EtISKDq",
+    keywords: ["Lógica"]
   },
   5: {
     icon: "5.png",
@@ -62,7 +66,8 @@ export default {
     solucao: "1t-CE1Gx8Ozj1KhrLeiwZ__kMrVqDCgiG",
     discussao: "1_C01TGV4sV8r60aPOW3ZCvFISMHKcjja",
     docente: "18uq6bpwOh4HH0_a9JFNVhLyPnM3hqHfr",
-    confeccao: "1ffiVLzJstegAkCFVlFhCTRUcEqL1d9y8"
+    confeccao: "1ffiVLzJstegAkCFVlFhCTRUcEqL1d9y8",
+    keywords: ["Lógica", "Subtração", "Adição"]
   },
   6: {
     icon: "5.png",
@@ -75,7 +80,8 @@ export default {
     solucao: "1zhYMiC570sK_8v-LzOp2_w_iqfebhIeI",
     discussao: "1-sXCEAR75ueLsYcD40dhHukFHaBJD4lw",
     docente: "1euRiGKo5I91A7m6qK3fZzqSUtwcBo1ay",
-    confeccao: "1Glyvitf-0MSARN2e07mJPKR6kK3GeMXU"
+    confeccao: "1Glyvitf-0MSARN2e07mJPKR6kK3GeMXU",
+    keywords: ["Lógica", "Subtração", "Adição"]
   },
   7: {
     icon: "7.png",
@@ -88,7 +94,8 @@ export default {
     solucao: "1ZSkCn9d7ZK80YYZgmFy54UFlREQZcltk",
     discussao: "122SyZz4X4vBh0VJ4EYrNnBq47FGIQDNY",
     docente: "1EeTRiL_Ab0coyrx8taY0cYEUtHPek8IV",
-    confeccao: "11Gc_IRohQ_XFirAwb7bGB7dGBXfu9cAW"
+    confeccao: "11Gc_IRohQ_XFirAwb7bGB7dGBXfu9cAW",
+    keywords: ["Lógica"]
   },
   8: {
     icon: "7.png",
@@ -101,7 +108,8 @@ export default {
     solucao: "1IvkxRCiu6MNJb7NZa1OaURZu2oklpCsS",
     discussao: "1Ht7FyNgJPfaSfSirAIAWRVp9Pkc9QgAv",
     docente: "1w69TttuNuVxIzTNYJUtBHXUzdZhgkGgh",
-    confeccao: "1u6FPdKHK9E0i1yodo9VUqCs3cC3soutu"
+    confeccao: "1u6FPdKHK9E0i1yodo9VUqCs3cC3soutu",
+    keywords: ["Lógica"]
   },
   9: {
     icon: "9.png",
@@ -109,12 +117,13 @@ export default {
     name: "Super Fantino I",
     level: 1,
     geogebra: "hzdcpwym",
-    new: true,
+    new: false,
     apresentacao: "1wzLTKl3WLUiaY8HwlEvm5BUCgsvLLb_Q",
     solucao: "1W6pietmHtetpN0fI71xRINQ-RRhG54rS",
     discussao: "1I7SZuN8Sal-G06zdNpcXbiElycOlAF5S",
     docente: "1GSVqVjgrzNVeM3TGdHn4fx9pfJTqA0oM",
-    confeccao: "1M7wHW_38qhW6nIj8UxOdftWxfWJP-I1v"
+    confeccao: "1M7wHW_38qhW6nIj8UxOdftWxfWJP-I1v",
+    keywords: ["Adição"]
   },
   10: {
     icon: "9.png",
@@ -122,11 +131,26 @@ export default {
     name: "Super Fantino II",
     level: 2,
     geogebra: "nxxnmkaj",
-    new: true,
+    new: false,
     apresentacao: "1cpccWg62hzduRMEzKh4RbP3Jz4-LqR-L",
     solucao: "1XMa9O_EcJarbLtHa4VrtWbUcoiIB1gyt",
     discussao: "1Sa-LVBRQh4CovPQD3yq6Y5tXlZeSqIDY",
     docente: "1K0V8itJoddKlpL801nxb9xJOvxHFV2NB",
-    confeccao: "1nkmeX9nSM275lV0AiT4K53WIa2UJvTJT"
+    confeccao: "1nkmeX9nSM275lV0AiT4K53WIa2UJvTJT",
+    keywords: ["Adição"]
+  },
+  11: {
+    icon: "11.png",
+    header: "header - malha i.png",
+    name: "Desenho na Malha I",
+    level: 1,
+    geogebra: "p4dhxg75",
+    new: true,
+    apresentacao: "1r9vSlvNmT9uYdftpPM1_A5ZEZawRRW8W",
+    solucao: "1u0N_H3ab6k2tQ_KoQiONuNblIIbTtHb9",
+    discussao: "1lzk9V4hQ7WJ5ULyORVhBpbuDxvgzOLKE",
+    docente: "1Nc5GbCD-jbMCQ5XYmTwCoOC5N8aHl3ce",
+    confeccao: "1AVRwp9mNOXZbA_6MepKzigYGyLUNHvIW",
+    keywords: ["Lógica", "Gráficos"]
   }
 }

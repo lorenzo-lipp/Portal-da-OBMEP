@@ -8,3 +8,5 @@ dist-ssr
 .cache
 replit_zip_error_log.txt
 replit.nix
+tsconfig.json
+tsconfig.node.json
