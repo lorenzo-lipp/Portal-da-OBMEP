@@ -1,12 +1,12 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import useQuery from "/src/hooks/useQuery";
 
 export default function ScrollToTop() {
-  const { pathname } = useLocation();
+  const query = useQuery();
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [query]);
 
   return null;
 }

@@ -2,17 +2,19 @@ import challenges from "/src/utils/challenges.js";
 import Buttons from "/src/components/Buttons";
 import Geogebra from "/src/components/Geogebra";
 import PDF from "/src/components/PDF";
-import Navbar from "/src/components/Navbar";
+import NavbarChallenges from "/src/components/NavbarChallenges";
 import Footer from "/src/components/Footer";
 import Rate from "/src/components/Rate";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-export default function Challenges() {
-  let { puzzleId } = useParams();
+export default function Challenges({ puzzleId }) {
+  /* let { puzzleId } = useParams(); */
   let id = puzzleId;
   let puzzle = challenges[id];
   let [selected, setSelected] = useState("");
+
+  if (!puzzle) return <></>;
 
   useEffect(() => {
     if (puzzle.geogebra) changeSelected("geogebra");
@@ -32,7 +34,7 @@ export default function Challenges() {
   
   return (
     <>
-      <Navbar showSearch={false} />
+      <NavbarChallenges />
       <h1>{puzzle.name}</h1>
       <div className="flex-justified">
         <img className="header" src={"/headers/" + puzzle.header} />

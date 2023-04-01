@@ -7,8 +7,8 @@ export default function Puzzle({ puzzleId }) {
 
   return (
     <>
-      <Link to={"/desafios/" + id} className="puzzle unactive">
-        <img className="puzzle-icon" src={"/icons/" + puzzle.icon} />
+      <Link to={"?desafio=" + id} className="puzzle unactive">
+        <img className="puzzle-icon" src={"/icons/" + puzzle.icon} alt="ícone do desafio" />
         <header className="puzzle-header">
           <div className="puzzle-top">
             <p className={"puzzle-new" + (puzzle.new ? "" : " hidden")}>NOVO</p>

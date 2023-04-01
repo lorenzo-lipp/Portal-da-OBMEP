@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { StarIcon, SendIcon, CancelIcon } from '/src/components/Icons';
 
 export default function Rate() {
   let [rating, setRating] = useState(null);
@@ -16,8 +17,11 @@ export default function Rate() {
   function handleClick(e) {
     if (feedbackSent) return;
     let pos = starsDiv.current.getBoundingClientRect();
-    console.log(e, pos)
-    setRating(Math.round((e.clientX + 15 - pos.left) * 5 / pos.width));
+    let newRating = Math.round((e.clientX + 15 - pos.left) * 5 / pos.width);
+    if (newRating === rating) {
+      setRating(0);
+      setStars(0);
+    } else setRating(newRating);
   }
 
   function getStarCss(starNumber) {
@@ -38,16 +42,21 @@ export default function Rate() {
         onMouseLeave={() => setStars(0)} 
         onClick={handleClick}
       >
-        <i className={"fa-solid fa-star" + getStarCss(1)} />
-        <i className={"fa-solid fa-star" + getStarCss(2)} />
-        <i className={"fa-solid fa-star" + getStarCss(3)} />
-        <i className={"fa-solid fa-star" + getStarCss(4)} />
-        <i className={"fa-solid fa-star" + getStarCss(5)} />
+        <StarIcon className={getStarCss(1)} />
+        <StarIcon className={getStarCss(2)} />
+        <StarIcon className={getStarCss(3)} />
+        <StarIcon className={getStarCss(4)} />
+        <StarIcon className={getStarCss(5)} />
       </div>
       <div className={"comments" + (rating && !feedbackSent ? " comments-visible" : " comments-hidden")}>
-        <h2>Envie uma sugestão para a melhoria do desafio:</h2>
-        <div className="textarea-wrapper"><textarea ref={feedback} /></div>
-        <div className="button button-purple" onClick={sendFeedback}>Enviar</div>
+        <h2>Deseja enviar um comentário sobre o desafio?</h2>
+        <div className="textarea-wrapper">
+          <textarea ref={feedback} placeholder="Escreva aqui o seu comentário..." />
+        </div>
+        <div className="buttons">
+          <div className="button button-red" onClick={() => sendFeedback("")}><CancelIcon /> Não</div>
+          <div className="button button-green" onClick={sendFeedback}>Enviar <SendIcon /></div>
+        </div>
       </div>
       <h2 className={feedbackSent ? "thanks" : "hidden"}>Obrigado!</h2>
     </div>

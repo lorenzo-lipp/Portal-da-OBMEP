@@ -1,7 +1,7 @@
 export default {
   1: {
     icon: "1.png",
-    header: "qvnvt5wx1tu0.png",
+    header: "h1.png",
     name: "Os Chapéus do Mágico",
     level: 1,
     geogebra: "dshawh2j",
@@ -15,7 +15,7 @@ export default {
   },
   2: {
     icon: "2.png",
-    header: "hm0d4lwz8o8o0.png",
+    header: "h2.png",
     name: "Pomar no Sítio",
     level: 1,
     geogebra: "",
@@ -29,9 +29,9 @@ export default {
   },
   3: {
     icon: "3.png",
-    header: "7v8159v0tuo0s.png",
+    header: "h3.png",
     name: "A Raposa, o Ganso e o Feijão",
-    geogebra: "qa2mw7cn",
+    geogebra: "rapfxgny",
     level: 1,
     new: true,
     apresentacao: "15ePsuM5UEE1xmgAigFeZyEk_dAWtZcw_",
@@ -43,7 +43,7 @@ export default {
   },
   4: {
     icon: "4.png",
-    header: "zsg9csnm4y88k.png",
+    header: "h4.png",
     name: "Dia das Crianças",
     level: 2,
     geogebra: "p5mzxcvm",
@@ -57,7 +57,7 @@ export default {
   },
   5: {
     icon: "5.png",
-    header: "header-5.png",
+    header: "h5.png",
     name: "Ultrapassagens na Estrada I",
     level: 1,
     geogebra: "ve38ftva",
@@ -71,7 +71,7 @@ export default {
   },
   6: {
     icon: "5.png",
-    header: "header-5.png",
+    header: "h5.png",
     name: "Ultrapassagens na Estrada II",
     level: 2,
     geogebra: "hgw2gr6d",
@@ -85,7 +85,7 @@ export default {
   },
   7: {
     icon: "7.png",
-    header: "header-7.png",
+    header: "h7.png",
     name: "Brincadeira entre Amigos I",
     level: 1,
     geogebra: "ttmwq4hr",
@@ -99,7 +99,7 @@ export default {
   },
   8: {
     icon: "7.png",
-    header: "header-7.png",
+    header: "h7.png",
     name: "Brincadeira entre Amigos II",
     level: 2,
     geogebra: "crhnd3az",
@@ -113,7 +113,7 @@ export default {
   },
   9: {
     icon: "9.png",
-    header: "header-9.png",
+    header: "h9.png",
     name: "Super Fantino I",
     level: 1,
     geogebra: "hzdcpwym",
@@ -127,7 +127,7 @@ export default {
   },
   10: {
     icon: "9.png",
-    header: "header-10.png",
+    header: "h10.png",
     name: "Super Fantino II",
     level: 2,
     geogebra: "nxxnmkaj",
@@ -141,7 +141,7 @@ export default {
   },
   11: {
     icon: "11.png",
-    header: "header - malha i.png",
+    header: "h11.png",
     name: "Desenho na Malha I",
     level: 1,
     geogebra: "p4dhxg75",

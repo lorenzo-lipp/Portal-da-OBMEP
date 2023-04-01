@@ -1,6 +1,6 @@
 import PuzzleGrid from '/src/components/PuzzleGrid';
 import NoMatches from '/src/components/NoMatches';
-import Navbar from '/src/components/Navbar';
+import NavbarHome from '/src/components/NavbarHome';
 import Footer from '/src/components/Footer';
 import filterPuzzles from "/src/utils/filterPuzzles.js";
 import sortPuzzles from "/src/utils/sortPuzzles.js";
@@ -43,12 +43,12 @@ export default function Home() {
 
   return (
     <>
-      <Navbar showSearch={true} search={search} callback={setSearch} keywords={keywords} setKeywords={setKeywords} />
+      <NavbarHome search={search} callback={setSearch} keywords={keywords} setKeywords={setKeywords} />
       <h1>Quebra-cabeças</h1>
       <div className="grid-container">
 
-        <PuzzleGrid puzzleList={levelOne} level="1" icon="11.png" showIf={levelOneFakePuzzleConditions}/>
-        <PuzzleGrid puzzleList={levelTwo} level="2" icon="12.png" showIf={levelTwoFakePuzzleConditions}/>
+        <PuzzleGrid puzzleList={levelOne} level="1" icon="Nivel 1.png" showIf={levelOneFakePuzzleConditions}/>
+        <PuzzleGrid puzzleList={levelTwo} level="2" icon="Nivel 2.png" showIf={levelTwoFakePuzzleConditions}/>
         <NoMatches show={!levelOne.length && !levelTwo.length} search={search} keywords={keywords}/>
 
       </div>

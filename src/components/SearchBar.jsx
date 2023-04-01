@@ -1,4 +1,5 @@
 import getKeywordsAvailable from '/src/utils/getKeywordsAvailable';
+import { SearchIcon } from '/src/components/Icons';
 const availableKeywords = getKeywordsAvailable();
 
 export default function SearchBar({ visible, search, callback, keywords, setKeywords }) {
@@ -21,8 +22,9 @@ export default function SearchBar({ visible, search, callback, keywords, setKeyw
           type="text"
           value={search}
           onChange={(e) => callback(e.target.value)}
+          placeholder="Digite aqui o nome do desafio"
         />
-        <i className="fa-solid fa-magnifying-glass"></i>
+        <SearchIcon />
       </div>
       <div className={className + " search-bar-row"}>
         {availableKeywords.map(keyword => {
