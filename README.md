@@ -9,14 +9,26 @@ O site encontra-se disponível em: [https://portal-da-obmep.lorenzo-lipp.repl.co
 ## Visualização da página inicial
 ![image](./images/preview-1.png)
 
-## Visualização de um desafio interativo
+## Visualização da lista de quebra-cabeças
 ![image](./images/preview-2.png)
 
-## Visualização do PDF de um desafio
+## Visualização da lista de aulas introdutórias
 ![image](./images/preview-3.png)
 
+## Visualização da lista de vídeos
+![image](./images/preview-8.png)
+
+## Visualização de um desafio interativo
+![image](./images/preview-5.png)
+
+## Visualização do PDF de um desafio
+![image](./images/preview-6.png)
+
 ## Visualização da ferramenta de pesquisa
-![image](./images/preview-4.png)
+![image](./images/preview-9.png)
 
 ## Visualização do sistema de avaliação
-![image](./images/preview-5.png)
+![image](./images/preview-7.png)
+
+## Visualização de um dos vídeos
+![image](./images/preview-4.png)

@@ -1,0 +1,89 @@
+.rate {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--navbar-light)
+}
+
+.stars {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.light-yellow-star {
+  fill: var(--light-yellow) !important;
+  filter: 
+    drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.7))
+    drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.7))
+    drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.3));
+}
+
+.fa-star {
+  height: 30px;
+  fill: rgba(0, 0, 0, 0.3);
+  margin: 0px 3px;
+}
+
+.fa-star:last-child {
+  margin-right: 0;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  transition: height 0.5s, opacity 0.3s 0.2s;
+}
+
+.comments h2 {
+  text-align: center;
+}
+
+.comments .textarea-wrapper {
+  height: 200px;
+  width: min(80%, 700px);
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: 20px 30px;
+  border-radius: 40px;
+  margin-bottom: 20px;
+}
+
+.comments textarea::placeholder {
+  color: rgba(117, 117, 117, 0.6);
+}
+
+.comments textarea {
+  width: 100%;
+  height: 200px;
+  font-size: 20px;
+  font-family: var(--default-font), arial;
+  font-weight: bold;
+  color: var(--textarea);
+  outline: none;
+  border: none;
+  resize: none;
+  background-color: transparent;
+}
+
+.comments .button-purple:hover {
+  background-color: var(--light-purple);
+}
+
+.comments-hidden {
+  visibility: hidden;
+  opacity: 0;
+  height: 0px;
+}
+
+.comments-visible {
+  visibility: visible;
+  height: 422px;
+}
+
+.rate .thanks {
+  color: var(--green);
+}

@@ -1,5 +1,6 @@
 import Puzzle from '/src/components/Puzzle';
 import FakePuzzle from '/src/components/FakePuzzle';
+import "./css/Grid.css";
 
 export default function PuzzleGrid({ puzzleList, level, icon, showIf }) {
   if (!puzzleList.length) return (<></>)
@@ -10,7 +11,7 @@ export default function PuzzleGrid({ puzzleList, level, icon, showIf }) {
         <img className="level-icon" src={icon} alt={"ícone do nível " + level} />
       </div>
       <div className="grid">
-        {puzzleList.map(id => <Puzzle puzzleId={id} key={"puzzle" + id} />)}
+        {puzzleList.map(id => <Puzzle puzzleId={id} key={"puzzle" + id + puzzleList.length} />)}
         <FakePuzzle showIf={showIf} />
       </div>
     </>

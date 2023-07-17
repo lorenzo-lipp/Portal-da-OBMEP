@@ -1,4 +1,5 @@
 import { PresentationIcon, SolutionIcon, DiscussionIcon, InteractiveIcon, ForTheTeacherIcon, ConfectionIcon } from '/src/components/Icons';
+import "./css/Buttons.css";
 
 export default function Buttons({ callback, puzzle, status }) {
   function isActive(type) {

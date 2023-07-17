@@ -3,10 +3,9 @@ node_modules
 dist
 dist-ssr
 *.local
-.replit
-.upm
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
 .cache
+.upm
 replit_zip_error_log.txt
 replit.nix
-tsconfig.json
-tsconfig.node.json

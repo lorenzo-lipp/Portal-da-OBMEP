@@ -1,0 +1,39 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 70px 150px 70px;
+  max-width: 1620px;
+}
+
+.level-1, .level-2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.level-1 {
+  margin: -100px 0 150px 0;
+}
+
+.level-2 {
+  margin: -60px 0 150px 0;
+}
+
+.level-icon {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  
+  position: absolute;
+  top: 60px;
+  pointer-events: none;
+}
+
+.level-name {
+  font-size: 38px;
+  color: var(--navbar-light);
+}

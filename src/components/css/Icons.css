@@ -1,0 +1,25 @@
+.fa {
+  margin-right: 8px;
+  fill: white;
+  height: 20px;
+}
+
+.fa-puzzle {
+  margin-left: 4px;
+  position: relative;
+  top: 3px;
+}
+
+.fa-share {
+  margin: 0 3px 0px 8px;
+}
+
+.fa-cancel {
+  margin: 0 8px 0px 3px;
+  position: relative;
+  top: 2px;
+}
+
+.fa-solid-external {
+  margin-left: 8px;
+}

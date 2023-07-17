@@ -1,0 +1,44 @@
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0px 0 40px 0;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 10px;
+  font-size: 26px;
+  height: 30px;
+  color: var(--bkg);
+  background-color: royalblue;
+  border-radius: 5px;
+  user-select: none;
+  cursor: pointer;
+  margin: 0 min(1.1vw, 20px) 10px min(1.1vw, 20px);
+}
+
+.button-active { 
+  box-shadow: -4px 4px 0px var(--button-border);
+  transition: box-shadow .2s;
+}
+
+.button-red { background-color: var(--red); }
+.button-blue { background-color: var(--blue); }
+.button-green { background-color: var(--green); }
+.button-cyan { background-color: var(--cyan); }
+.button-purple { background-color: var(--purple); }
+.button-yellow { background-color: var(--yellow); }
+
+.sendbuttons .button {
+  height: 27px;
+  transition: box-shadow .2s, transform .3s;
+}
+
+.sendbuttons .button:hover {
+  transform: scale(1.05); 
+  box-shadow: -3px 4px 0px var(--button-border);
+}

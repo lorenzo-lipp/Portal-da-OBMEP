@@ -1,4 +1,4 @@
-import challenges from "/src/utils/challenges.js";
+import puzzleData from "/src/data/puzzleData.json";
 
 function normalizeString(str) {
   return str.toLowerCase()
@@ -18,14 +18,14 @@ function hasAllElements(arr1, arr2) {
 
 export default function filterPuzzles(level, search, keywords) {
   if (!search) {
-    if (!keywords.length) return (value) => challenges[value].level === level;
-    else return (value) => challenges[value].level === level && hasAllElements(keywords, challenges[value].keywords);
+    if (!keywords.length) return (value) => puzzleData[value].level === level;
+    else return (value) => puzzleData[value].level === level && hasAllElements(keywords, puzzleData[value].keywords);
   }
 
   search = normalizeString(search);
 
   let regex = new RegExp(`^${search}|\\W${search}`);
 
-  if (!keywords.length) return (value) => challenges[value].level === level && normalizeString(challenges[value].name).match(regex);
-  return (value) => challenges[value].level === level && normalizeString(challenges[value].name).match(regex) && hasAllElements(keywords, challenges[value].keywords);
+  if (!keywords.length) return (value) => puzzleData[value].level === level && normalizeString(puzzleData[value].name).match(regex);
+  return (value) => puzzleData[value].level === level && normalizeString(puzzleData[value].name).match(regex) && hasAllElements(keywords, puzzleData[value].keywords);
 }

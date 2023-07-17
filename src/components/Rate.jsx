@@ -1,7 +1,9 @@
 import { useState, useRef } from 'react';
 import { StarIcon, SendIcon, CancelIcon } from '/src/components/Icons';
+import "./css/Buttons.css";
+import "./css/Rate.css";
 
-export default function Rate() {
+export default function Rate({ name }) {
   let [rating, setRating] = useState(null);
   let [stars, setStars] = useState(0);
   let [feedbackSent, setFeedbackSent] = useState(false);
@@ -9,7 +11,7 @@ export default function Rate() {
   let feedback = useRef();
   
   function handleMouseOver(e) {
-    if (feedbackSent) return;
+    if (feedbackSent || rating > 0) return;
     let pos = starsDiv.current.getBoundingClientRect();
     setStars(Math.round((e.clientX + 15 - pos.left) * 5 / pos.width));
   }
@@ -30,11 +32,20 @@ export default function Rate() {
 
   function sendFeedback() {
     setFeedbackSent(true);
+    fetch("https://formspree.io/f/xknaqlpk", {
+      method: "POST",
+      body: JSON.stringify({
+        "material": name,
+        "estrelas": stars,
+        "comentario": feedback.current.value
+      }),
+      headers: {'Content-Type': 'application/json'}
+    })
   }
   
   return (
     <div className="rate">
-      <h2>Avalie o desafio:</h2>
+      <h2>Avalie o material:</h2>
       <div 
         className="stars" 
         ref={starsDiv}
@@ -49,12 +60,12 @@ export default function Rate() {
         <StarIcon className={getStarCss(5)} />
       </div>
       <div className={"comments" + (rating && !feedbackSent ? " comments-visible" : " comments-hidden")}>
-        <h2>Deseja enviar um comentário sobre o desafio?</h2>
+        <h2>Deseja enviar um comentário sobre o material?</h2>
         <div className="textarea-wrapper">
           <textarea ref={feedback} placeholder="Escreva aqui o seu comentário..." />
         </div>
-        <div className="buttons">
-          <div className="button button-red" onClick={() => sendFeedback("")}><CancelIcon /> Não</div>
+        <div className="sendbuttons buttons">
+          <div className="button button-red" onClick={() => setFeedbackSent(true)}><CancelIcon /> Não</div>
           <div className="button button-green" onClick={sendFeedback}>Enviar <SendIcon /></div>
         </div>
       </div>

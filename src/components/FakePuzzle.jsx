@@ -1,3 +1,5 @@
+import "./css/FakePuzzle.css";
+
 export default function FakePuzzle({ showIf }) {
   let className = "fakePuzzle ";
   if (showIf.includes(2)) className += "showWithTwo ";

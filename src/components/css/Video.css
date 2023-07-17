@@ -1,0 +1,14 @@
+.video-wrapper {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--button-border);
+  border-radius: 15px;
+  max-width: min(98vw, 95vh * 16 / 9, 1080px);
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,117 @@
+.search-bar {
+  background-color: var(--navbar);
+  display: flex;
+  justify-content: center;
+  height: 53px;
+  transition: height 0.4s;
+}
+
+.search-bar-container {
+  opacity: 1;
+  transition: height 0.5s ease-in-out;
+  width: 100%;
+  overflow: hidden;
+}
+
+.search-bar .fa {
+  position: relative;
+  top: 12px;
+  left: 12px;
+  fill: rgba(255, 255, 255, 0.4);
+  height: 28px;
+  transition: opacity 0.2s 0.3s;
+  margin-right: -28px;
+}
+
+.search-bar input[type="text"] {
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 10px 0; 
+  padding: 5px 20px;
+  width: 50%;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: var(--default-font), arial;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 1;
+  transition: opacity 0.2s 0.3s;
+}
+
+.search-bar input[type="text"]:focus::placeholder {
+  color: transparent;
+}
+
+.search-bar input[type="text"]::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  transition: opacity 0.2s 0.3s;
+}
+
+.checkbox-marked {
+  position: relative;
+  background-color: var(--checkbox-green);
+  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+.checkbox-marked::before {
+  content: "\2713";
+  position: absolute;
+  left: 15%;
+  top: -15%;
+  font-size: 18px;
+  font-family: arial;
+  font-weight: bold;
+  color: var(--bkg);
+}
+
+.checkbox-unmarked {
+  background-color: var(--bkg);
+  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+.search-bar label {
+  color: var(--bkg);
+  height: min-content;
+  margin-left: 5px;
+}
+
+.search-bar-row {
+  align-items: center;
+  height: fit-content;
+  padding: 8px 10% 11px 10%;
+  flex-wrap: wrap;
+}
+
+.search-bar-checkbox-marked, .search-bar-checkbox-unmarked  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 10px;
+  margin: 0px 5px 5px 0;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 30px;
+}
+
+.search-bar-checkbox-marked {
+  background-color: var(--navbar-light);
+}
+
+@media (max-width: 880px) {
+  .search-bar input[type="text"] {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 450px) {
+  .search-bar input[type="text"] {
+    font-size: 14px;
+  }
+}

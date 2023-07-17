@@ -1,9 +1,10 @@
-import challenges from "/src/utils/challenges.js";
+import puzzleData from "/src/data/puzzleData.json";
 import { Link } from 'react-router-dom';
+import "./css/Puzzle.css";
 
 export default function Puzzle({ puzzleId }) {
   let id = puzzleId;
-  let puzzle = challenges[id];
+  let puzzle = puzzleData[id];
 
   return (
     <>
