@@ -1,0 +1,44 @@
+.card a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card .img-wrapper {
+  width: 300px;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--button-border);
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 4%);
+  overflow: hidden;
+  margin: 0px 60px;
+}
+
+.card img {
+  width: 70%;
+  height: 70%;
+}
+
+.card .button {
+  margin-top: 20px;
+  width: 70%;
+}
+
+.card {
+  transition: transform 0.3s;
+  margin-bottom: 35px;
+}
+
+.card:hover {
+  transform: scale(1.07);
+}
+
+@media (max-width: 450px) {
+  .card {
+    transform: scale(0.9);
+  }
+}
