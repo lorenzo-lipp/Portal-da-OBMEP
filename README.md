@@ -6,6 +6,15 @@ A proposta inicial foi de refazer o site do [Portal da OBMEP](https://portaldaob
 
 O site encontra-se disponível em: [https://quebracabecas.github.io/](https://quebracabecas.github.io/)
 
+É possível reproduzir esse site usando:
+
+```
+npm install
+npm run build
+```
+
+E então substituindo os arquivos index.html, assets/intex.js e assets/index.css do repositório [https://github.com/quebracabecas/quebracabecas.github.io](https://github.com/quebracabecas/quebracabecas.github.io) pelos arquivos gerados na pasta dist.
+
 ## Visualização da página inicial
 ![image](./images/preview-1.png)
 
