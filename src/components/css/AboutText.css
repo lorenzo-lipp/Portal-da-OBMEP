@@ -1,0 +1,40 @@
+.about-center {
+    display: flex;
+    justify-content: center;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+    margin-top: -20px;
+    max-width: 1200px;
+}
+
+.about-text {
+    font-size: 22px;
+    margin: 2px;
+    color: var(--pdf-border);
+    text-align: justify;
+    text-indent: 50px;
+}
+
+.about-text a {
+    color: var(--red);
+    text-decoration: none;
+}
+
+.about-fig {
+    max-width: 96%;
+}
+
+.about-img {
+    max-width: 100%;
+}
+
+.about-cap {
+    text-align: center;
+    font-size: 15px;
+}

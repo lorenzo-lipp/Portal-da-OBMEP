@@ -4,7 +4,7 @@ Este é um projeto com a finalidade de estudar a construção de sites usando Re
 
 A proposta inicial foi de refazer o site do [Portal da OBMEP](https://portaldaobmep.impa.br/index.php/modulo/index?a=4), tornando-o responsivo e mais atrativo para o público-alvo (infantil).
 
-O site encontra-se disponível em: [https://portal-da-obmep.lorenzo-lipp.repl.co](https://portal-da-obmep.lorenzo-lipp.repl.co)
+O site encontra-se disponível em: [https://quebracabecas.github.io/](https://quebracabecas.github.io/)
 
 ## Visualização da página inicial
 ![image](./images/preview-1.png)

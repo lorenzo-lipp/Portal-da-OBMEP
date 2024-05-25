@@ -1,0 +1,39 @@
+.controllers-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.pdf, .pptx {
+  border-radius: 10px;
+  outline: none;
+  border: 4px solid var(--button-border);
+  width: 96vw;
+  height: 105vw;
+  margin-bottom: 15px;
+}
+
+.pdf {
+  max-width: 870px;
+  max-height: 1220px;
+}
+
+.pptx-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: min(96%, 1420px);
+  padding-top: min(58.35%, 830px);
+  margin-bottom: 15px;    
+}
+
+.pptx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}

@@ -1,0 +1,30 @@
+.fakePuzzle {
+  display: none;
+  height: 0px;
+  width: calc(400px * 0.7);
+  user-select: none;
+}
+
+@media (min-width: 1558px) {
+  .showWithFive {
+    display: unset;
+  }
+}
+
+@media (min-width: 1277px) and (max-width: 1557px) {
+  .showWithFour {
+    display: unset;
+  }
+}
+
+@media (min-width: 998px) and (max-width: 1276px) {
+  .showWithThree {
+    display: unset;
+  }
+}
+
+@media (min-width: 716px) and (max-width: 997px) {
+  .showWithTwo {
+    display: unset;
+  }
+}
