@@ -13,12 +13,15 @@ export default function SingleLesson({ lessonId }) {
   let [lessonData, setLessonData] = useState({});
   let [puzzleData, setPuzzleData] = useState({});
   let lesson = lessonData[lessonId];
-  let [selected, setSelected] = useState("lesson");
+  let [selected, setSelected] = useState("video");
 
   useEffect(() => {
     fetch(`${window.location.protocol}//${window.location.host}/data/lessonData.json`)
       .then(data => data.json())
-      .then(jsonData => setLessonData(jsonData))
+      .then(jsonData => {
+        setLessonData(jsonData)
+        if (jsonData[lessonId].drive) setSelected("lesson");
+      })
       .catch(console.log);
 
     fetch(`${window.location.protocol}//${window.location.host}/data/puzzleData.json`)
@@ -73,7 +76,7 @@ export default function SingleLesson({ lessonId }) {
       {lessonData[lessonId] ?
         <>
           <h1>{lesson.name}</h1>
-          {lesson.drive && lesson.video ? <LessonButtons callback={changeSelected} lesson={lesson} status={selected}/> : <></>}
+          <LessonButtons callback={changeSelected} lesson={lesson} status={selected}/>
           <div className="file">
             {getEmbed(selected)}
           </div> 

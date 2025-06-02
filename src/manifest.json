@@ -1,34 +1,34 @@
 {
   "name": "Portal Quebra-Cabeças",
   "short_name": "Quebra-Cabeças",
-  "start_url": "https://quebra-cabecas.lorenzo-lipp.repl.co/",
+  "start_url": "https://quebracabecas.github.io/",
   "display": "standalone",
   "background_color": "#faf4e1",
   "theme_color": "#174599",
   "orientation": "portrait-primary",
   "icons": [
     { 
-      "src": "https://quebra-cabecas.lorenzo-lipp.repl.co/pwa-icons/64x64.png",
+      "src": "https://quebracabecas.github.io/pwa-icons/64x64.png",
       "type": "image/png",
       "sizes": "64x64"
     },
     { 
-      "src": "https://quebra-cabecas.lorenzo-lipp.repl.co/pwa-icons/128x128.png",
+      "src": "https://quebracabecas.github.io/pwa-icons/128x128.png",
       "type": "image/png",
       "sizes": "128x128"
     },
     { 
-      "src": "https://quebra-cabecas.lorenzo-lipp.repl.co/pwa-icons/256x256.png",
+      "src": "https://quebracabecas.github.io/pwa-icons/256x256.png",
       "type": "image/png",
       "sizes": "256x256"
     },
     { 
-      "src": "https://quebra-cabecas.lorenzo-lipp.repl.co/pwa-icons/512x512.png",
+      "src": "https://quebracabecas.github.io/pwa-icons/512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     },
     { 
-      "src": "https://quebra-cabecas.lorenzo-lipp.repl.co/pwa-icons/maskable.png",
+      "src": "https://quebracabecas.github.io/pwa-icons/maskable.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "maskable"

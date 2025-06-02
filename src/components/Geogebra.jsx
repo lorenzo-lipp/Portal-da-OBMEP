@@ -16,7 +16,8 @@ export default function Geogebra({ puzzle, show }) {
 
     if (!document.querySelector(".applet_scaler")) {
       let applet = new GGBApplet(parameters, true);
-      
+
+      // applet.setHTML5Codebase("https://www.geogebra.org/apps/5.2.836.0/web3d");
       applet.inject('applet_container');
     }
   });

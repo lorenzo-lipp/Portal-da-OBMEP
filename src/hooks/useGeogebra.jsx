@@ -5,7 +5,7 @@ export default function useGeogebra(callback) {
     const script = document.createElement('script');
 
     window.ggbOnInit = () => {};
-    script.src = "https://www.geogebra.org/apps/deployggb.js";
+    script.src = "/deployggb.js";
     script.onload = callback;
     
     document.body.appendChild(script);

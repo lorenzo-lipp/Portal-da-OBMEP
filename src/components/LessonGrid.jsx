@@ -1,8 +1,10 @@
 import Lesson from '/src/components/Lesson';
+import sortLessons from '/src/utils/sortLessons'
 
 export default function LessonGrid({ data }) {
   let lessonList = Object.keys(data);
-  
+  lessonList.sort(sortLessons(data));
+
   return (
     <>
       <div className="card-container">

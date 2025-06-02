@@ -11,7 +11,7 @@ export default function Puzzle({ puzzle, puzzleId }) {
         <header className="puzzle-header">
           <div className="puzzle-top">
             <p className={"puzzle-new" + (puzzle.new ? "" : " hidden")}>NOVO</p>
-            <p className={"puzzle-geogebra" + (puzzle.geogebra ? "" : " hidden")}>INTERATIVO</p>
+            <p className={"puzzle-geogebra" + (puzzle.geogebra ? " hidden" : " hidden")}>INTERATIVO</p>
           </div>
           <div className="puzzle-bottom">
             <p className="puzzle-name">{puzzle.name}</p>

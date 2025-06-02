@@ -1,7 +1,7 @@
 .video-wrapper {
   display: flex;
-  width: min(96vw, 1080 / 1920 * 98vh, 1080px);
-  height: min(98vh - 1px, 1920 / 1080 * 96vw, 1920px);
+  aspect-ratio: 1080 / 1920;
+  height: 98vh;
   border: 2px solid var(--button-border);
   border-radius: 5px;
 }
