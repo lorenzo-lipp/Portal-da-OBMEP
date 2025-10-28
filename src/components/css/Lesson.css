@@ -1,19 +1,25 @@
 .card-lesson .img-wrapper {
-  width: 400px;
+  width: 350px;
   border: none;
   border-radius: 0;
   background: url("/Board.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  max-height: 288px;
+  background-size: contain;
+  max-height: 252px;
   max-width: 95vw;
-  aspect-ratio: 400 / 288;
+  aspect-ratio: 350 / 252;
+  margin: 0px 30px;
 }
 
 .card-lesson img {
   width: auto;
   height: 70%;
   filter: contrast(0) brightness(2);
+}
+
+.card-lesson .button {
+    font-size: 18px;
+    text-align: center;
 }
 
 .card-lesson .write-effect {

@@ -13,7 +13,7 @@ export default function Puzzle({ puzzle, puzzleId }) {
             <p className={"puzzle-new" + (puzzle.new ? "" : " hidden")}>NOVO</p>
             <p className={"puzzle-geogebra" + (puzzle.geogebra ? " hidden" : " hidden")}>INTERATIVO</p>
           </div>
-          <div className="puzzle-bottom">
+          <div className={"puzzle-bottom" + (puzzle.longTitle ? " long-title" : "")}>
             <p className="puzzle-name">{puzzle.name}</p>
           </div>
         </header>

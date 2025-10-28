@@ -73,6 +73,11 @@
 .puzzle-bottom {
   display: flex;
   justify-content: center;
+  padding: 0 10px;
+}
+
+.puzzle-bottom.long-title {
+  margin-top: -15px;
 }
 
 .puzzle-new, .puzzle-geogebra {
@@ -89,6 +94,7 @@
   padding: 3px 8px;
   background: rgba(42, 42, 42, 20%);
   width: fit-content;
+  text-align: center;
 }
 
 @media (max-width: 1276px) {
